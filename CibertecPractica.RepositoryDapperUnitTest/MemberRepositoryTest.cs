@@ -33,13 +33,13 @@ namespace CibertecPractica.RepositoryDapperUnitTest
         //    Assert.True(result > 0);
         //}
 
-        [Fact(DisplayName = "[MemberRepository]Delete")]
-        public void Corporation_Repository_Delete()
-        {
-            var member = GetNewMember();
-            var result = unit.Members.Insert(member);
-            Assert.True(unit.Members.Delete(member));
-        }
+        //[Fact(DisplayName = "[MemberRepository]Delete")]
+        //public void Corporation_Repository_Delete()
+        //{
+        //    var member = GetNewMember();
+        //    var result = unit.Members.Insert(member);
+        //    Assert.True(unit.Members.Delete(member));
+        //}
 
         //private Member GetNewMember()
         //{
@@ -86,8 +86,8 @@ namespace CibertecPractica.RepositoryDapperUnitTest
         [Fact(DisplayName = "[MemberRepository]Get By Nombre")]
         public void memberSearchByLastnameFirstname()
         {
-            var corporation = unit.Members.memberSearchByLastnameFirstname("Corp. Apex QuestsInc.","");
-            Assert.True(corporation != null);
+            var member = unit.Members.memberSearchByLastnameFirstname("ANDERSON", "QDQRJVEINMJYHK");
+            Assert.True(member != null);
         }
     }
 }
